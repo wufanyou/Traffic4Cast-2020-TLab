@@ -20,21 +20,21 @@ parser.add_argument(
 parser.add_argument(
     "-i",
     "--input-dir",
-    default="/bigdata03/traffic4cast2020/data/",
+    default="./traffic4cast2020/data/",
     type=str,
 )
 
 parser.add_argument(
     "-o",
     "--ouput-dir",
-    default="/bigdata03/traffic4cast2020/",
+    default="./traffic4cast2020/",
     type=str,
 )
 
 parser.add_argument(
     "-t",
     "--test-slots",
-    default="/bigdata03/traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/test_slots.json",
+    default="./traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/test_slots.json",
     type=str,
 )
 

@@ -21,19 +21,19 @@ city = args.city.upper()
 #cfg = get_cfg()
 #cfg.merge_from_file('v5-hrnet-base.yaml')
 
-test_slots = "/bigdata03/traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/test_slots.json"
+test_slots = "./traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/test_slots.json"
 with open(test_slots) as f:
     test_json = json.load(f)
 test_json = {list(d.keys())[0]:list(d.values())[0] for d in test_json}
 test_json = {pd.to_datetime(k).dayofyear:v for k,v in test_json.items()}
 
-val_dates = "/bigdata03/traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/val_dates.json"
+val_dates = "./traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/val_dates.json"
 with open(val_dates) as f:
     valid_json = json.load(f)
 valid_json = [pd.to_datetime(k).dayofyear for k in valid_json]
 
 cipt_map = {'BERLIN':int(5e10),'ISTANBUL':int(1e11),'MOSCOW':int(2e11)}
-env = lmdb.open(os.path.join('/bigdata03/traffic4cast2020/processed_data/', f"{city.upper()}_GK"),map_size = cipt_map[city])
+env = lmdb.open(os.path.join('./traffic4cast2020/processed_data/', f"{city.upper()}_GK"),map_size = cipt_map[city])
 
 
 def process(dayofyear):
