@@ -1,0 +1,24 @@
+DIST:
+    VERSION: v6-hrnet-3D-all
+    STORE_FREC: 1
+    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/weights/v6-hrnet-3D-all-all-best.pth
+DATASET:
+    NAME: DatasetV20
+    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    INPUT_CHANNELS: 95
+    DAYS: [-7, -3, -2, -1, 1, 2, 3, 7]
+OPTIM:
+    NAME: FusedLAMB
+    BATCH_SIZE: 4
+    INIT_LR: 1e-2
+    WARM_UP_EPOCH: 0.1
+    MAX_EPOCH: 3
+    USE_LR_SCHEDULER: true
+LOG: 
+    DIR: /bigdata03/traffic4cast2020/log
+    STEP: 10
+MODEL:
+    HIDDEN_ACTIVATION: ELU
+    #MODEL_CONFIG_FILE: /bigdata03/traffic4cast2020/config/w48.yaml
+    MODEL_VERSION: HighResolutionNetGeoEmbeddingWith3DInput

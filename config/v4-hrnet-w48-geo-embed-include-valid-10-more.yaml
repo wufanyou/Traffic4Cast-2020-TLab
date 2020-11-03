@@ -1,0 +1,24 @@
+DIST:
+    VERSION: v4-hrnet-w48-geo-embed-include-valid-10-more
+    STORE_FREC: 5
+    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/processed_data/hrnet_w48.pth
+DATASET:
+    NAME: DatasetV13
+    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    INPUT_CHANNELS: 197
+    DAYS: [-7, -3, -2, -1, 1, 2, 3, 7]
+OPTIM:
+    NAME: FusedLAMB
+    BATCH_SIZE: 4
+    INIT_LR: 1e-2
+    WARM_UP_EPOCH: 1.0
+    MAX_EPOCH: 25
+    USE_LR_SCHEDULER: true
+LOG: 
+    DIR: /bigdata03/traffic4cast2020/log
+    STEP: 10
+MODEL:
+    HIDDEN_ACTIVATION: ELU
+    MODEL_CONFIG_FILE: /bigdata03/traffic4cast2020/config/w48.yaml
+    MODEL_VERSION: HighResolutionNetGeoEmbedding

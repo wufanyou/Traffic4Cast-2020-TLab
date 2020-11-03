@@ -1,0 +1,22 @@
+DIST:
+    VERSION: v2-deeplabv3-base
+    STORE_FREC: 5
+    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/processed_data/deeplabv3_resnet50.pth
+MODEL:
+    MODEL_VERSION: deeplabv3_resnet50
+    NAME: deeplabv3
+DATASET:
+    NAME: DatasetV4
+    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    INPUT_CHANNELS: 124
+OPTIM:
+    NAME: FusedLAMB
+    BATCH_SIZE: 8
+    INIT_LR: 1e-2
+    WARM_UP_EPOCH: 1.0
+    MAX_EPOCH: 15
+    USE_LR_SCHEDULER: true
+LOG: 
+    DIR: /bigdata03/traffic4cast2020/log
+    STEP: 10

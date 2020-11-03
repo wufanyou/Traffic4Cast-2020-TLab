@@ -719,7 +719,7 @@ class HighResolutionNetGeoEmbeddingWith3DInput(HighResolutionNet):
         y = torch.cat([extra, geo], axis=1)
         y = self.conv1(y)
         y = self.bn1(y)
-        x = torch.cat([x,self.relu(y)], axis=1)
+        x = torch.cat([x, self.relu(y)], axis=1)
         x = self.conv2(x)
         x = self.bn2(x)
         x = self.relu(x)

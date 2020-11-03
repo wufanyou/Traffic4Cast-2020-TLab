@@ -209,7 +209,9 @@ def valid_model_ensembles_geometric_mean(loaders, models, weights=None):
 
 
 @torch.torch.no_grad()
-def valid_model_ensembles_zeros(loaders, models, weight=[0.5,0.5], zero_threshold=range(1,11)):
+def valid_model_ensembles_zeros(
+    loaders, models, weight=[0.5, 0.5], zero_threshold=range(1, 11)
+):
     losses = defaultdict(lambda: [])
     for model in models:
         model.eval()
@@ -231,7 +233,7 @@ def valid_model_ensembles_zeros(loaders, models, weight=[0.5,0.5], zero_threshol
         for threshold in zero_threshold:
             z = x.clone()
             z = torch.clamp(z, 0, 1)
-            z[z<threshold/10/255] = 0
+            z[z < threshold / 10 / 255] = 0
             loss = F.mse_loss(z, y)
             loss = loss.detach().cpu().item()
             losses[str(threshold)].append(loss)
