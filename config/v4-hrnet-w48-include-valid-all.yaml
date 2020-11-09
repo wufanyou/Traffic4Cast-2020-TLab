@@ -1,11 +1,11 @@
 DIST:
     VERSION: v4-hrnet-w48-include-valid-all
     STORE_FREC: 1
-    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/weights/v4-hrnet-w48-base-berlin-15.pth
+    PRETRAIN_MODEL: ./traffic4cast2020/weights/v4-hrnet-w48-base-berlin-15.pth
 DATASET:
     NAME: DatasetV8
-    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
-    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    VALID_INDEX: ./traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: ./traffic4cast2020/processed_data/test_index.npz
     INPUT_CHANNELS: 189
     DAYS: [-7, -3, -2, -1, 1, 2, 3, 7]
 OPTIM:
@@ -16,8 +16,8 @@ OPTIM:
     MAX_EPOCH: 5
     USE_LR_SCHEDULER: true
 LOG: 
-    DIR: /bigdata03/traffic4cast2020/log
+    DIR: ./traffic4cast2020/log
     STEP: 10
 MODEL:
     HIDDEN_ACTIVATION: ELU
-    MODEL_CONFIG_FILE: /bigdata03/traffic4cast2020/config/w48.yaml
+    MODEL_CONFIG_FILE: ./traffic4cast2020/config/w48.yaml

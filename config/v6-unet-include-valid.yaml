@@ -1,11 +1,11 @@
 DIST:
     VERSION: v6-unet-include-valid
     STORE_FREC: 1
-    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/weights/v6-unet-include-valid-istanbul-10.pth
+    PRETRAIN_MODEL: ./traffic4cast2020/weights/v6-unet-include-valid-istanbul-10.pth
 DATASET:
     NAME: DatasetV19
-    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
-    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    VALID_INDEX: ./traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: ./traffic4cast2020/processed_data/test_index.npz
     INPUT_CHANNELS: 195
     DAYS: [-7, -3, -2, -1, 1, 2, 3, 7]
 OPTIM:
@@ -16,7 +16,7 @@ OPTIM:
     MAX_EPOCH: 10
     USE_LR_SCHEDULER: true
 LOG: 
-    DIR: /bigdata03/traffic4cast2020/log
+    DIR: ./traffic4cast2020/log
     STEP: 10
 MODEL:
     MODEL_VERSION: UnetV1

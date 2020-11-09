@@ -1,11 +1,11 @@
 DIST:
     VERSION: v4-hrnet-w48-geo-embed-correct
     STORE_FREC: 5
-    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/processed_data/hrnet_w48.pth
+    PRETRAIN_MODEL: ./traffic4cast2020/processed_data/hrnet_w48.pth
 DATASET:
     NAME: DatasetV12
-    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
-    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    VALID_INDEX: ./traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: ./traffic4cast2020/processed_data/test_index.npz
     INPUT_CHANNELS: 197
     DAYS: [-7, -3, -2, -1, 1, 2, 3, 7]
 OPTIM:
@@ -16,9 +16,9 @@ OPTIM:
     MAX_EPOCH: 15
     USE_LR_SCHEDULER: true
 LOG: 
-    DIR: /bigdata03/traffic4cast2020/log
+    DIR: ./traffic4cast2020/log
     STEP: 10
 MODEL:
     HIDDEN_ACTIVATION: ELU
-    MODEL_CONFIG_FILE: /bigdata03/traffic4cast2020/config/w48.yaml
+    MODEL_CONFIG_FILE: ./traffic4cast2020/config/w48.yaml
     MODEL_VERSION: HighResolutionNetGeoEmbedding

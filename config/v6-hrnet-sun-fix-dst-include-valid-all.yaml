@@ -1,11 +1,11 @@
 DIST:
     VERSION: v6-hrnet-sun-fix-dst-include-valid-all # 1.修改名字
     STORE_FREC: 1 # 2.修改存储频率 5->1
-    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/weights/v6-hrnet-sun-fix-dst-include-valid-moscow-best.pth # 3.修改加载模型 
+    PRETRAIN_MODEL: ./traffic4cast2020/weights/v6-hrnet-sun-fix-dst-include-valid-moscow-best.pth # 3.修改加载模型 
 DATASET:
     NAME: DatasetV19
-    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
-    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    VALID_INDEX: ./traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: ./traffic4cast2020/processed_data/test_index.npz
     INPUT_CHANNELS: 203
     DAYS: [-7, -3, -2, -1, 1, 2, 3, 7]
 OPTIM:
@@ -16,9 +16,9 @@ OPTIM:
     MAX_EPOCH: 5 # 5.修改MAX_EPOCH, 15-> 5 也可以再多一些
     USE_LR_SCHEDULER: true
 LOG: 
-    DIR: /bigdata03/traffic4cast2020/log
+    DIR: ./traffic4cast2020/log
     STEP: 10
 MODEL:
     HIDDEN_ACTIVATION: ELU
-    MODEL_CONFIG_FILE: /bigdata03/traffic4cast2020/config/w48.yaml
+    MODEL_CONFIG_FILE: ./traffic4cast2020/config/w48.yaml
     MODEL_VERSION: HighResolutionNetGeoEmbedding

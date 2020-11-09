@@ -1,11 +1,11 @@
 DIST:
     VERSION: v4-unet-base
     STORE_FREC: 5
-    PRETRAIN_MODEL: /bigdata03/traffic4cast2020/processed_data/efficientnet-b3-unet.pth
+    PRETRAIN_MODEL: ./traffic4cast2020/processed_data/efficientnet-b3-unet.pth
 DATASET:
     NAME: DatasetV8
-    VALID_INDEX: /bigdata03/traffic4cast2020/processed_data/valid_index.npz
-    TEST_INDEX: /bigdata03/traffic4cast2020/processed_data/test_index.npz
+    VALID_INDEX: ./traffic4cast2020/processed_data/valid_index.npz
+    TEST_INDEX: ./traffic4cast2020/processed_data/test_index.npz
     INPUT_CHANNELS: 189
     DAYS: [-7, -3, -2, -1, 1, 2, 3, 7]
 OPTIM:
@@ -16,7 +16,7 @@ OPTIM:
     MAX_EPOCH: 15
     USE_LR_SCHEDULER: true
 LOG: 
-    DIR: /bigdata03/traffic4cast2020/log
+    DIR: ./traffic4cast2020/log
     STEP: 10
 MODEL:
     MODEL_VERSION: UnetV1
