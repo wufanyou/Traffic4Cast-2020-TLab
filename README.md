@@ -20,7 +20,7 @@ done
 ```
 
 
-6. or run `gen_ensemble.py` to run ensemble models with uint8 output.
+6. or run `gen_ensemble.py` to run ensemble models with uint8 output. We provide a version around 1.1667e-3. Our best score need float output and some files in moscow will exceed the 20M limits. So we need also generate two version and replace ~4 file in moscow to reach the best score.
 ```
 for CITY in 0 1 2;
 do
