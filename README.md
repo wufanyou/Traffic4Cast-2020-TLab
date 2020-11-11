@@ -15,10 +15,10 @@ Here `-m` option decides the max size for lmdb. This value varies for different 
 
 2. run `tools/agg_feat_lmdb.py` with three cities.
 ```
-INPUT_DIR = './';
-python agg_feat_lmdb.py --city BERLIN -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 50000000000;
-python agg_feat_lmdb.py --city ISTANBUL -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json  -m 100000000000;
-python agg_feat_lmdb.py --city MOSCOW -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 200000000000;
+for CITY in BERLIN ISTANBUL MOSCOW;
+do
+  python agg_feat_lmdb.py --city $CITY;
+done
 ```
 
 3. Download pre-trained model [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in pre-trained  weights directory and 
