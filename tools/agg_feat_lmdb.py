@@ -19,15 +19,15 @@ parser.add_argument(
 args = parser.parse_args()
 city = args.city.upper()
 cfg = get_cfg()
-cfg.merge_from_file('v3-hrnet-8-day.yaml')
+cfg.merge_from_file('config/v3-hrnet-8-day.yaml')
 
-test_slots = "./traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/test_slots.json"
+test_slots = "./processed_data/test_slots.json"
 with open(test_slots) as f:
     test_json = json.load(f)
 test_json = {list(d.keys())[0]:list(d.values())[0] for d in test_json}
 test_json = {pd.to_datetime(k).dayofyear:v for k,v in test_json.items()}
 
-val_dates = "./traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/val_dates.json"
+val_dates = "./processed_data/val_dates.json"
 with open(val_dates) as f:
     valid_json = json.load(f)
 valid_json = [pd.to_datetime(k).dayofyear for k in valid_json]
