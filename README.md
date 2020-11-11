@@ -21,12 +21,12 @@ python agg_feat_lmdb.py --city ISTANBUL -i $INPUT_DIR -o ./processed_data/ --tes
 python agg_feat_lmdb.py --city MOSCOW -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 200000000000;
 ```
 
-3. Download pretrained model [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=bJpWDP) in pretrained weights directory and 
+3. Download pretrained model [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in pretrained weights directory and 
 put it into processed_data dictionary or set config file `PRETRAIN_MODEL: ''`
 4. Install [apex](https://github.com/NVIDIA/apex) and other requirement libraries in requirements.txt
 
 5. run `gen.py` to geneante single model submision, our best single model use `v4-hrnet-w48-geo-embed-include-valid.yaml` and the online score is 1.1761e-3.
-First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=bJpWDP) in weights directory and put it into weights directory and run:
+First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into weights directory and run:
 
 ```
 for CITY in BERLIN ISTANBUL MOSCOW;
@@ -39,7 +39,7 @@ done
 ```
 
 
-6. or run `gen_ensemble.py` to run ensemble models with uint8 output. We provide a version with score around 1.1667e-3. Our best score need float output and some files in moscow will exceed the 20M limit. So we need also generate two version and replace ~4 file in moscow to reach the best score.First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=bJpWDP) in weights directory and put it into weights directory and run:
+6. or run `gen_ensemble.py` to run ensemble models with uint8 output. We provide a version with score around 1.1667e-3. Our best score need float output and some files in moscow will exceed the 20M limit. So we need also generate two version and replace ~4 file in moscow to reach the best score.First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into weights directory and run:
 ```
 for CITY in BERLIN ISTANBUL MOSCOW;
 do
