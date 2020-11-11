@@ -19,7 +19,7 @@ parser.add_argument(
 args = parser.parse_args()
 city = args.city.upper()
 cfg = get_cfg()
-cfg.merge_from_file('config/v3-hrnet-8-day.yaml')
+cfg.merge_from_file('./config/v3-hrnet-8-day.yaml')
 
 test_slots = "./processed_data/test_slots.json"
 with open(test_slots) as f:
