@@ -7,7 +7,7 @@ The 2nd place solution to Neurips 2020 Traffic4Cast competition. Check traffic4c
 
 ```
 INPUT_DIR = './'
-python process_lmdb.py --city BERLIN -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json -m -m 50000000000
+python process_lmdb.py --city BERLIN -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 50000000000
 python process_lmdb.py --city ISTANBUL -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json  -m 100000000000
 python process_lmdb.py --city MOSCOW -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 200000000000
 ```
@@ -16,7 +16,7 @@ Here `-m` option decide the max size for lmdb. This value vary for different cit
 2. run `tools/agg_feat_lmdb.py` with three city.
 ```
 INPUT_DIR = './'
-python agg_feat_lmdb.py --city BERLIN -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json -m -m 50000000000
+python agg_feat_lmdb.py --city BERLIN -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 50000000000
 python agg_feat_lmdb.py --city ISTANBUL -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json  -m 100000000000
 python agg_feat_lmdb.py --city MOSCOW -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 200000000000
 ```
