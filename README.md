@@ -7,9 +7,9 @@ The 2nd place solution to Neurips 2020 Traffic4Cast competition. Check traffic4c
 
 ```
 INPUT_DIR = './';
-python process_lmdb.py --city BERLIN -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 50000000000;
-python process_lmdb.py --city ISTANBUL -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json  -m 100000000000;
-python process_lmdb.py --city MOSCOW -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 200000000000;
+python tools/process_lmdb.py --city BERLIN -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 50000000000;
+python tools/process_lmdb.py --city ISTANBUL -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json  -m 100000000000;
+python tools/process_lmdb.py --city MOSCOW -i $INPUT_DIR -o ./processed_data/ --test-slots ./processed_data/test_slots.json    -m 200000000000;
 ```
 Here `-m` option decides the max size for lmdb. This value varies for different cities.
 
@@ -17,7 +17,7 @@ Here `-m` option decides the max size for lmdb. This value varies for different 
 ```
 for CITY in BERLIN ISTANBUL MOSCOW;
 do
-  python agg_feat_lmdb.py --city $CITY;
+  python tools/agg_feat_lmdb.py --city $CITY;
 done
 ```
 
