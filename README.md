@@ -8,4 +8,5 @@ The 2nd place solution to Neurips 2020 Traffic4Cast competition. Check traffic4c
 3. Download pretrained model [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=bJpWDP) and 
 put it into processed_data dictionary 
 or set config file `PRETRAIN_MODEL: ''`
-4. run 
+4. run `gen.py` to geneante single model submision
+5. or run `gen-ensemble.py` to run ensemble models.
