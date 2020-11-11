@@ -31,7 +31,8 @@ First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T
 ```
 for CITY in BERLIN ISTANBUL MOSCOW;
 do
-python gen.py --city $CITY --path ./config/v4-hrnet-w48-geo-embed-include-valid.yaml --tag best --test-slots ./processed_data/test_slots.json;
+python gen.py --city $CITY --path ./config/v4-hrnet-w48-geo-embed-include-valid.yaml \
+--tag best --test-slots ./processed_data/test_slots.json;
 done
 ```
 
