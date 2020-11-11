@@ -20,11 +20,11 @@ done
 ```
 
 
-6. or run `gen_ensemble-mutil-dataset-mp-fl.py` to run ensemble models with float input.
+6. or run `gen_ensemble.py` to run ensemble models with uint8 output.
 ```
 for CITY in 0 1 2;
 do
-python gen_ensemble-mutil-dataset-mp-fl.py -c $CITY -w "4,3,1,3,1,2,1,4" 
+python gen_ensemble.py -c $CITY -w "4,3,1,3,1,2,1,4" 
 --use-all "0,0,0,0,0,0,0,1" 
 --config "./config/v4-hrnet-w48-geo-embed-include-valid.yaml,./config/v4-hrnet-w48-include-valid.yaml,./config/v4-hrnet-include-valid.yaml,./v6-hrnet-sun-fix-dst-include-valid.yaml,./v6-hrnet-3D.yaml,./v6-unet-include-valid.yaml,./v4-hrnet-w48-geo-add-0-day-embed-include-valid.yaml,./v4-hrnet-w48-include-valid-all.yaml" --tag "best,best,best,best,best,best,best,best"
 done
