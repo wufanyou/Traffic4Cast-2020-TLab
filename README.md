@@ -39,7 +39,7 @@ done
 ```
 
 
-6. or run `gen_ensemble.py` to run ensemble models with uint8 output. We provide a version with a score of around 1.1667e-3. Our best score needs float output, and some files in Moscow will exceed the 20M limit. So we need also generate two versions and replace ~4 files in Moscow to reach the best score. First, download model weights [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into local weights directory, and run:
+6. or run `gen_ensemble.py` to run ensemble models with uint8 output. We provide a version with a score of around 1.1667e-3. In fact, only need to ensemble 4 models then we can reach top 2. Our best score needs float output, and some files in Moscow will exceed the 20M limit. So we need also generate two versions and replace ~4 files in Moscow to reach the best score. First, download model weights [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into local weights directory, and run:
 ```
 for CITY in BERLIN ISTANBUL MOSCOW;
 do
