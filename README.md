@@ -12,8 +12,9 @@ put it into processed_data dictionary or set config file `PRETRAIN_MODEL: ''`
 5. run `gen.py` to geneante single model submision, our best single model use `v4-hrnet-w48-geo-embed-include-valid.yaml`, First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=bJpWDP) and put it into weights directory and run:
 
 ```
-for CITY in BERLIN ISTANBUL MOSCOW do
-  python gen.py --city $CITY --path ./config/v4-hrnet-w48-geo-embed-include-valid.yaml --tag best --test-slots ./processed_data/test_slots.json
+for CITY in BERLIN ISTANBUL MOSCOW;
+do
+python gen.py --city $CITY --path ./config/v4-hrnet-w48-geo-embed-include-valid.yaml --tag best --test-slots ./processed_data/test_slots.json;
 done
 ```
 
