@@ -26,7 +26,7 @@ put it into processed_data dictionary or set config file `PRETRAIN_MODEL: ''`
 4. Install [apex](https://github.com/NVIDIA/apex) and other requirement libraries in requirements.txt
 
 5. run `gen.py` to generate single model submission. Our best single model use `v4-hrnet-w48-geo-embed-include-valid.yaml`, and the online score is 1.1761e-3.
-First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into weights directory and run:
+First download model wegihts [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into local weights directory and run:
 
 ```
 for CITY in BERLIN ISTANBUL MOSCOW;
@@ -39,7 +39,7 @@ done
 ```
 
 
-6. or run `gen_ensemble.py` to run ensemble models with uint8 output. We provide a version with a score of around 1.1667e-3. Our best score needs float output, and some files in Moscow will exceed the 20M limit. So we need also generate two versions and replace ~4 files in Moscow to reach the best score. First, download model weights [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into weights directory, and run:
+6. or run `gen_ensemble.py` to run ensemble models with uint8 output. We provide a version with a score of around 1.1667e-3. Our best score needs float output, and some files in Moscow will exceed the 20M limit. So we need also generate two versions and replace ~4 files in Moscow to reach the best score. First, download model weights [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=TtInHa) in weights directory and put it into local weights directory, and run:
 ```
 for CITY in BERLIN ISTANBUL MOSCOW;
 do
