@@ -53,7 +53,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "-t",
     "--test-slots",
-    default="./traffic4cast2020/NeurIPS2020-traffic4cast/core-competition/util/test_slots.json",
+    default="./processed_data/test_slots.json",
     type=str,
 )
 parser.add_argument(
@@ -67,7 +67,7 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "-p", "--path", default="./traffic4cast2020/submission", type=str,
+    "-p", "--path", default="./traffic4cast2020/", type=str,
 )
 
 parser.add_argument(
