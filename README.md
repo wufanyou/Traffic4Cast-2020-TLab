@@ -3,6 +3,9 @@ The 2nd place solution to Neurips 2020 Traffic4Cast competition. Check traffic4c
 
 # Instruction of how to run the code.
 
-1. run `tools/process_lmdb.py`
-2. run `tools/agg_feat_lmdb.py`
-3. 
+1. run `tools/process_lmdb.py` with three city.
+2. run `tools/agg_feat_lmdb.py` with three city.
+3. Download pretrained model [here](https://1drv.ms/u/s!AiK3JSLEIEcGxVutqMS0s01T7czA?e=bJpWDP) and 
+put it into processed_data dictionary 
+or set config file `PRETRAIN_MODEL: ''`
+4. run 
