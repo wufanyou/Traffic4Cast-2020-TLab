@@ -5,3 +5,4 @@ tqdm
 segmentation-models-pytorch
 h5py
 pandas
+joblib
