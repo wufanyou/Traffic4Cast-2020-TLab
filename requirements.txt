@@ -6,3 +6,5 @@ segmentation-models-pytorch
 h5py
 pandas
 joblib
+torchvision
+tensorbard
