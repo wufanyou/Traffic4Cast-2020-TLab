@@ -352,5 +352,5 @@ dependencies:
     - yacs==0.1.6
     - yarl==1.6.0
     - zipp==3.2.0
-prefix: /home/omnisky/anaconda3
+prefix: /home
 
